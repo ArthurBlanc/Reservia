@@ -1,0 +1,405 @@
+/* ---------------------------------------- */
+/* ==            SUMMARY              */
+/*---------------------------------------- */
+
+		/* == COLOR CODES  */
+		/* == FONT  */
+		/* == GENERAL  */
+		/* == HEADER  */
+		/* == SECTION SEARCH  */
+		/* == SECTION LODGING  */
+		/* == SECTION ACTIVITY  */
+		/* == FOOTER  */
+		/* == MEDIA QUERIES  */
+
+/* ---------------------------------------- */
+/* ==       COLOR CODES           */
+/*---------------------------------------- */
+
+/*
+
+
+*/
+
+/* ---------------------------------------- */
+/* ==              FONT                 */
+/*---------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ---------------------------------------- */
+/* ==            GENERAL                */
+/*---------------------------------------- */
+
+body {
+  background: #FFF;
+  margin: 0;
+  width: 100%;
+  font-family: "Raleway","Sans serif";
+  font-size: 4vw;
+}
+
+.main-container {
+  margin: 0 auto; /* Centrer horizontalement le conteneur principal */
+}
+
+.search, .lodging-container, .popular-container, .activity, .footer {
+  padding: 0 6vw;
+}
+
+.lodging-container, .popular-container, .activity, .footer {
+  padding-top: 8vw;
+  padding-bottom: 4vw;
+}
+
+.lodging-title, .popular-title, .activity-header {
+  padding-bottom: 6vw;
+}
+
+img { /* Rendre les images responsive */
+  width: 100%;
+  height: auto;   
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; /* Retire les marges des titres */
+}
+
+.popular-container, .footer {
+  background: #f2f2f2;
+}
+
+.lodging a, .activity a {
+  color: #000;
+  text-decoration: none;
+}
+
+.fas {
+  color: #0065fc;
+}
+
+.grey-star {
+  color: #d9d9d9;
+}
+
+/* ---------------------------------------- */
+/* ==            HEADER                */
+/*---------------------------------------- */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 4vw;
+}
+
+.logo {
+  width: 30%;
+  margin-left: 4vw;
+}
+
+nav {
+  order: 3;
+  width: 100%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+}
+
+nav li {
+  width: 50%;
+  text-align: center;
+  border-bottom: 3px solid #f2f2f2;
+  padding-bottom: 4vw;
+}
+
+.nav-actived {
+  border-bottom: 3px solid #0065fc;
+}
+
+.nav-actived a {
+  color: #408bfd;
+  font-weight: bold;
+}
+
+.sign-up {
+  display: flex;
+  align-items: center;
+  margin-right: 4vw;
+  color: #0065fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lodging-card, .popular-card, .activity-card {
+  background: #fff;
+  border-radius: 4vw;
+  box-shadow: 0 0 6px #0000002e;
+}
+
+.lodging-card-img, .popular-card-img, .activity-card-img {
+  position: relative;
+}
+
+.lodging-card-img img, .popular-card-img img, .activity-card-img img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4vw 4vw 0 0;
+  position: absolute;
+  top: 0;
+}
+
+/* ---------------------------------------- */
+/* ==        SECTION SEARCH            */
+/*---------------------------------------- */
+
+.search {
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+
+.search-subtitle {
+  margin-top: 2vw;
+}
+
+.search-form {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 4vw;
+  margin-bottom: 8vw;
+  border-top: #f2f2f2 1px solid;
+  border-bottom: #f2f2f2 1px solid;
+  border-radius: 4vw;
+}
+
+.search-form-icon {
+  background-color: #f2f2f2;
+  padding: 4vw 5vw;
+  border-radius: 4vw 0 0 4vw;
+}
+
+.search-input {
+  width: inherit;
+  border: none;
+  padding-left: 4vw;
+  font-weight: bold;
+  font-size: 4vw;
+}
+
+.search-button {
+  background-color: #0065fc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 4vw;
+  padding: 0 5vw;
+  cursor: pointer;
+}
+
+.fa-search-white {
+  color: #fff;
+}
+
+.search-button-name {
+  display: none;
+}
+
+.search-filter-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-filter-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 8vw 4vw 0;
+}
+
+.search-filter {
+  display: flex;
+  align-items: center;
+  margin-right: 2vw;
+  border: 2px solid #d9d9d9;
+  border-radius: 8vw;
+  margin-bottom: 1vw;
+  cursor: pointer;
+}
+
+.search-filter:hover {
+  background: #f2f2f2;
+}
+
+.search-filters-icon {
+  background-color: #deebff;
+  border-radius: 100%;
+  height: 12vw;
+  width: 12vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -2px;
+}
+
+.map-marker-alt-black {
+ color: #000;
+}
+
+.search-filters-name {
+  margin: 0 3vw;
+  font-weight: bold;
+}
+
+.search-result-number {
+  display: flex;
+  align-items: center;
+}
+
+.search-result-number-icon {
+  min-height: 6vw;
+  min-width: 6vw;
+  border: solid 1px #d9d9d9;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2vw;
+}
+
+/* ---------------------------------------- */
+/* ==        SECTION LODGING           */
+/*---------------------------------------- */
+
+.lodging {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.lodging-container, .popular-container {
+  width: 100%;
+}
+
+.lodging-card {
+  padding: 1.2vw;
+  margin-bottom: 4vw;
+}
+
+.lodging-card-img {
+  padding-top: calc(23% / 65 * 100);
+}
+
+.lodging-card-content {
+  margin: 2vw;
+}
+
+.lodging-card-price {
+  margin-top: 1.6vw;
+  margin-bottom: 1.6vw;
+}
+
+.lodging-card-ratings {
+  font-size: 3vw;
+}
+
+.lodging-show-more {
+  margin-top: 8vw;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+
+
+.popular-title h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart-line-black {
+  color: #000;
+}
+
+.popular-card {
+  margin-bottom: 3vw;
+}
+
+.popular-card a {
+  display: flex;
+}
+
+.popular-card-img-container {
+  width: 40%;
+  flex-shrink: 0;
+}
+
+.popular-card-img {
+  padding-top: calc(27% / 25 * 100);
+}
+
+.popular-card-img img {
+  border-radius: 4vw 0 0 4vw;
+}
+
+.popular-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2vw 4vw;
+}
+
+.popular-card-ratings {
+  padding-bottom: 1vw;
+}
+
+
+/* ---------------------------------------- */
+/* ==        SECTION ACTIVITY          */
+/*---------------------------------------- */
+
+.activity h3 {
+  padding: 4vw;
+}
+
+.activity-card {
+  margin-bottom: 8vw;
+}
+
+.activity-card-img {
+  padding-top: calc(27% / 67 * 100);
+}
+
+/* ---------------------------------------- */
+/* ==            FOOTER                 */
+/*---------------------------------------- */
+
+.footer {
+  padding-bottom: 8vw;
+}
+
+.footer-column {
+  padding-bottom: 1vw;
+}
+
+.footer-column ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 1vw;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* ---------------------------------------- */
+/* ==       MEDIAS QUERIES        */
+/*---------------------------------------- */
