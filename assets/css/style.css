@@ -2,15 +2,15 @@
 /* ==            SUMMARY              */
 /*---------------------------------------- */
 
-		/* == COLOR CODES  */
-		/* == FONT  */
-		/* == GENERAL  */
-		/* == HEADER  */
-		/* == SECTION SEARCH  */
-		/* == SECTION LODGING  */
-		/* == SECTION ACTIVITY  */
-		/* == FOOTER  */
-		/* == MEDIA QUERIES  */
+/* == COLOR CODES  */
+/* == FONT  */
+/* == GENERAL  */
+/* == HEADER  */
+/* == SECTION SEARCH  */
+/* == SECTION LODGING  */
+/* == SECTION ACTIVITY  */
+/* == FOOTER  */
+/* == MEDIA QUERIES  */
 
 /* ---------------------------------------- */
 /* ==       COLOR CODES           */
@@ -25,84 +25,81 @@ BACKGROUND GREY : #F2F2F2;
 /* ---------------------------------------- */
 /* ==              FONT                 */
 /*---------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* ---------------------------------------- */
 /* ==            GENERAL                */
 /*---------------------------------------- */
 
 body {
-  background: #FFF;
-  margin: 0;
-  width: 100%;
-  font-family: "Raleway","Sans serif";
-  font-size: 4vw;
+	margin: 0;
+	font-family: "Raleway", "Sans serif";
+	font-size: 4vw; /* Police à 4/100e de la largeur du viewport*/
 }
 
 .main-container {
-  margin: 0 auto; /* Centrer horizontalement le conteneur principal */
+	margin: 0 auto; /* Centrer horizontalement le conteneur principal */
 }
 
-.search, .lodging-container, .popular-container, .activity, .footer-container {
-  padding: 0 6vw;
+.main-padding {
+	padding: 8vw 6vw 4vw 6vw; /* Padding général */
 }
 
-.lodging-container, .popular-container, .activity, .footer-container {
-  padding-top: 8vw;
-  padding-bottom: 4vw;
+.main-title {
+	padding-bottom: 6vw;
 }
 
-.lodging-title, .popular-title, .activity-header {
-  padding-bottom: 6vw;
+/* Rendre les images responsive */
+img {
+	width: 100%;
+	height: auto;
 }
 
-img { /* Rendre les images responsive */
-  width: 100%;
-  height: auto;   
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0; /* Retire les marges des titres */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0; /* Retire les marges des titres */
+.popular-container,
+.footer {
+	background: #f2f2f2;
 }
 
-.popular-container, .footer {
-  background: #f2f2f2;
+.card {
+	background: #fff;
+	border-radius: 4vw;
+	box-shadow: 0 0 10px #0000002e;
 }
 
-.lodging a, .activity a {
-  color: #000;
-  text-decoration: none;
+.card a {
+	color: #000;
+	text-decoration: none;
 }
 
-.lodging-card, .popular-card, .activity-card {
-  background: #fff;
-  border-radius: 4vw;
-  box-shadow: 0 0 6px #0000002e;
-  transition-duration: .5s;
+.card-img {
+	position: relative; /* Pour forcer un ratio aux images des cartes */
 }
 
-.lodging-card:hover, .popular-card:hover, .activity-card:hover {
-  transform: scale(1.05);
-}
-
-.lodging-card-img, .popular-card-img, .activity-card-img {
-  position: relative;
-}
-
-.lodging-card-img img, .popular-card-img img, .activity-card-img img {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 4vw 4vw 0 0;
-  position: absolute;
-  top: 0;
+.card-img img {
+	/* Pour forcer un ratio aux images des cartes => */
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/* <= Pour forcer un ratio aux images des cartes */
+	-o-object-fit: cover;
+	object-fit: cover;
+	border-radius: 4vw 4vw 0 0;
 }
 
 .fas {
-  color: #0065FC;
-}
-
-.grey-star {
-  color: #F2F2F2;
+	color: #0065fc; /* Change la couleur par defaut des icones Font Awesome */
 }
 
 /* ---------------------------------------- */
@@ -110,192 +107,172 @@ h1, h2, h3, h4, h5, h6 {
 /*---------------------------------------- */
 
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 4vw;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 4vw;
 }
 
 .logo {
-  width: 30%;
-  margin-left: 4vw;
+	display: block;
+	width: auto;
+	margin-left: 4vw;
 }
 
 nav {
-  order: 3;
-  width: 100%;
+	order: 3; /* Place le menu en 3e position */
+	width: 100%;
 }
 
 nav a {
-  color: #000;
-  text-decoration: none;
-  transition-duration: .5s;
+	color: #000;
+	text-decoration: none;
 }
 
 nav a:hover {
-  color: #0065FC;
+	color: #0065fc;
 }
 
 nav ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
+	display: flex;
+	list-style: none;
+	padding-left: 0;
 }
 
 nav li {
-  width: 50%;
-  text-align: center;
-  border-bottom: 3px solid #f2f2f2;
-  padding-bottom: 4vw;
-  transition-duration: .5s;
+	width: 50%;
+	text-align: center;
+	padding-bottom: 4vw;
+	border-bottom: 3px solid #f2f2f2;
 }
 
 nav li:hover {
-  border-bottom: 3px solid #0065fc;
+	border-bottom: 3px solid #0065fc;
 }
 
 .nav-actived {
-  border-bottom: 3px solid #0065fc;
+	border-bottom: 3px solid #0065fc;
 }
 
 .nav-actived a {
-  color: #0065FC;
-  font-weight: bold;
+	color: #0065fc;
 }
 
 .sign-up {
-  display: flex;
-  align-items: center;
-  margin-right: 4vw;
-  color: #0065fc;
-  text-decoration: none;
-  font-weight: bold;
+	display: flex;
+	align-items: center;
+	margin-right: 4vw;
+	color: #0065fc;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 /* ---------------------------------------- */
 /* ==        SECTION SEARCH            */
 /*---------------------------------------- */
 
-.search {
-  margin-top: 4vw;
-  margin-bottom: 4vw;
-}
-
 .search-subtitle {
-  margin-top: 2vw;
+	margin-top: 2vw;
 }
 
 .search-form {
-  display: inline-flex;
-  width: 100%;
-  margin-top: 4vw;
-  margin-bottom: 8vw;
-  border-top: #f2f2f2 1px solid;
-  border-bottom: #f2f2f2 1px solid;
-  border-radius: 4vw;
+	display: flex;
+	width: 100%;
+	margin-top: 8vw;
+	margin-bottom: 8vw;
+	border-top: #f2f2f2 1px solid;
+	border-bottom: #f2f2f2 1px solid;
+	border-radius: 4vw;
 }
 
 .search-form-icon {
-  background-color: #f2f2f2;
-  padding: 4vw 5vw;
-  border-radius: 4vw 0 0 4vw;
+	background-color: #f2f2f2;
+	padding: 4vw 5vw;
+	border-radius: 4vw 0 0 4vw;
 }
 
 .search-input {
-  width: inherit;
-  border: none;
-  padding-left: 4vw;
-  font-weight: bold;
-  font-size: 4vw;
+	width: 100%;
+	border: none;
+	padding-left: 4vw;
+	font-weight: bold;
+	font-size: 4vw;
 }
 
 .search-button {
-  background-color: #0065fc;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  font-size: 4vw;
-  border-radius: 4vw;
-  padding: 0 5vw;
-  opacity: 0.8;
-  transition-duration: .2s;
-  cursor: pointer;
-}
-
-.search-button:hover {
-  opacity: 1;
+	background-color: #0065fc;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	font-size: 4vw;
+	border-radius: 4vw;
+	padding: 0 5vw;
+	cursor: pointer;
 }
 
 .fa-search-white {
-  color: #fff;
+	color: #fff;
 }
 
 .search-button-name {
-  display: none;
+	display: none; /* Masque le texte "Recherche" en version mobile */
 }
 
 .search-filter-container {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .search-filter-title {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0 8vw 4vw 0;
+	width: 100%;
+	margin: 0 8vw 4vw 0;
 }
 
 .search-filter {
-  display: flex;
-  align-items: center;
-  margin-right: 3vw;
-  border: 2px solid #f2f2f2;
-  border-radius: 8vw;
-  margin-bottom: 3vw;
-  transition-duration: .5s;
-  cursor: pointer;
-}
-
-.search-filter:hover {
-  background: #f2f2f2;
+	display: flex;
+	align-items: center;
+	margin-right: 3vw;
+	border: 2px solid #d9d9d9;
+	border-radius: 8vw;
+	margin-bottom: 3vw;
+	cursor: pointer;
 }
 
 .search-filters-icon {
-  background-color: #deebff;
-  border-radius: 100%;
-  height: 12vw;
-  width: 12vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: -2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 12vw;
+	width: 12vw;
+	margin: -2px;
+	background-color: #deebff;
+	border-radius: 100%;
 }
 
 .map-marker-alt-black {
- color: #000;
+	color: #000;
 }
 
 .search-filters-name {
-  margin: 0 3vw;
-  font-weight: bold;
+	margin: 0 3vw;
+	font-weight: bold;
 }
 
 .search-result-number {
-  display: flex;
-  align-items: center;
-  margin: 2vw 0;
+	display: flex;
+	align-items: center;
+	margin: 2vw 0 0 0;
 }
 
 .search-result-number-icon {
-  min-height: 6vw;
-  min-width: 6vw;
-  border: solid 1px #f2f2f2;
-  border-radius: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 2vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 6vw;
+	min-width: 6vw;
+	margin-right: 2vw;
+	border: solid 1px #d9d9d9;
+	border-radius: 100%;
 }
 
 /* ---------------------------------------- */
@@ -303,733 +280,811 @@ nav li:hover {
 /*---------------------------------------- */
 
 .lodging {
-  display: flex;
-  flex-wrap: wrap-reverse;
+	display: flex;
+	flex-wrap: wrap-reverse;
 }
 
-.lodging-container, .popular-container {
-  width: 100%;
+.lodging-container,
+.popular-container {
+	width: 100%;
 }
 
 .lodging-card {
-  padding: 1.2vw;
-  margin-bottom: 4vw;
+	padding: 1.2vw;
+	margin-bottom: 4vw;
 }
 
 .lodging-card-img {
-  padding-top: calc(23% / 65 * 100);
+	padding-top: calc(23% / 65 * 100); /* Force un ratio de 65:23 */
 }
 
 .lodging-card-content {
-  margin: 2vw;
+	margin: 2vw;
 }
 
 .lodging-card-price {
-  margin-top: 1.6vw;
-  margin-bottom: 1.6vw;
+	margin-top: 1.6vw;
+	margin-bottom: 1.6vw;
+}
+
+.lodging-card-price-euro {
+	font-weight: bold;
 }
 
 .lodging-card-ratings {
-  font-size: 3vw;
+	font-size: 3vw;
+}
+
+.grey-star {
+	color: #f2f2f2;
 }
 
 .lodging-show-more {
-  margin-top: 8vw;
-  font-size: 5vw;
-  font-weight: bold;
+	margin-top: 8vw;
+	font-size: 5vw;
+	font-weight: bold;
 }
 
-.popular-title h2 {
-  display: flex;
-  justify-content: space-between;
+.lodging-show-more a {
+	color: #000;
+	text-decoration: none;
+}
+
+.popular-title {
+	display: flex;
+	justify-content: space-between;
 }
 
 .chart-line-black {
-  color: #000;
-}
-
-.popular-card {
-  margin-bottom: 3vw;
+	color: #000;
 }
 
 .popular-card a {
-  display: flex;
+	display: flex;
 }
 
 .popular-card-img-container {
-  width: 40%;
-  flex-shrink: 0;
+	width: 40%;
+	flex-shrink: 0; /* Supprime le redimensionnement flex de l'image */
 }
 
 .popular-card-img {
-  padding-top: calc(27% / 25 * 100);
+	padding-top: calc(27% / 25 * 100); /* Force un ratio de 25:27 */
 }
 
 .popular-card-img img {
-  border-radius: 4vw 0 0 4vw;
+	border-radius: 4vw 0 0 4vw;
 }
 
 .popular-card-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 2vw 4vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 2vw 4vw;
 }
 
 .popular-card-ratings {
-  padding-bottom: 1vw;
+	padding-bottom: 1vw;
 }
 
 /* ---------------------------------------- */
 /* ==        SECTION ACTIVITY          */
 /*---------------------------------------- */
 
-.activity h3 {
-  padding: 4vw;
-}
-
 .activity-card {
-  margin-bottom: 8vw;
+	margin-bottom: 8vw;
 }
 
 .activity-card-img {
-  padding-top: calc(27% / 67 * 100);
+	padding-top: calc(27% / 67 * 100); /* Force un ratio de 67:27 */
+}
+
+.activity-card-title {
+	padding: 5vw;
 }
 
 /* ---------------------------------------- */
 /* ==            FOOTER                 */
 /*---------------------------------------- */
 
-.footer-container {
-  padding-bottom: 8vw;
-}
-
 .footer-column {
-  padding-bottom: 1vw;
-}
-
-.footer-column ul {
-  padding-left: 0;
-  list-style: none;
+	padding-bottom: 1vw;
+	padding-left: 0;
+	list-style: none;
 }
 
 .footer-column li {
-  margin-bottom: 1vw;
+	margin-bottom: 4vw;
 }
 
 .footer a {
-  color: #000;
-  text-decoration: none;
+	color: #000;
+	text-decoration: none;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* ---------------------------------------- */
 /* ==       MEDIAS QUERIES        */
 /*---------------------------------------- */
 
-/* == TABLET  */
+/* == TABLET AND PHONE LANDSCAPE */
+/* Resolution entre 600px et 1199px */
 @media screen and (min-width: 600px) and (max-width: 1199px) {
+	/* Les VW sont en général divisés par 2 par rapport à la version mobile */
 
-  /* == GENERAL  */
-  body {
-    font-size: 2vw;
-  }
+	/* == GENERAL  */
+	body {
+		font-size: 2vw; /* Police à 2/100e de la largeur du viewport */
+	}
 
-  .search, .lodging-container, .popular-container, .activity, .footer-container {
-    padding: 0 3vw;
-  }
+	.main-padding {
+		padding: 3vw 3vw 2vw 3vw; /* Padding général */
+	}
 
-  .lodging-container, .popular-container, .activity, .footer-container {
-    padding-top: 3vw;
-    padding-bottom: 2vw;
-  }
+	.main-title {
+		padding-bottom: 3vw;
+		width: 100%;
+	}
 
-  .lodging-title, .popular-title, .activity-header {
-    padding-bottom: 3vw;
-    width: 100%;
-  }
+	.card {
+		border-radius: 2vw;
+	}
 
-  .lodging-card, .popular-card, .activity-card {
-    border-radius: 2vw;
-  }
+	.card-img img {
+		border-radius: 2vw 2vw 0 0;
+	}
 
-  .lodging-card-img img, .popular-card-img img, .activity-card-img img {
-    border-radius: 2vw 2vw 0 0;
-  }
+	/* == HEADER  */
 
-  /* == HEADER  */
+	.header-container {
+		margin-top: 0;
+	}
 
-  .header-container {
-    margin-top: 0;
-  }
+	.logo,
+	nav li,
+	.sign-up {
+		padding-top: 3vw;
+	}
 
-  .logo, nav li, .sign-up {
-    padding-top: 3vw;
-  }
+	.logo {
+		margin-left: 3vw;
+	}
 
-  .logo {
-    width: auto;
-    margin-left: 3vw;
-  }
+	nav {
+		order: 0; /* Supprime le changement d'ordre du menu */
+		width: 40%;
+		margin-left: auto; /* Place le menu sur la droite */
+	}
 
-  nav {
-    order: 0;
-    width: 40%;
-    margin-left: auto;
-  }
+	nav ul {
+		margin-top: 0;
+	}
 
-  nav ul {
-    margin-top: 0;
-  }
+	nav li {
+		border-top: 3px solid #f2f2f2;
+		border-bottom: 0; /* Supprime la bordure du bas du menu */
+		padding-bottom: 0;
+	}
 
-  nav li {
-    border-top: 3px solid #f2f2f2;
-    border-bottom: 0;
-    padding-bottom: 0;
-  }
+	nav li:hover {
+		border-top: 3px solid #0065fc;
+		border-bottom: 0; /* Supprime la bordure du bas du menu */
+		padding-bottom: 0;
+	}
 
-  nav li:hover {
-    border-top: 3px solid #0065fc;
-    border-bottom: 0;
-    padding-bottom: 0;
-  }  
+	.nav-actived {
+		border-bottom: 0; /* Supprime la bordure du bas du menu */
+		border-top: 3px solid #0065fc;
+	}
 
-  .nav-actived {
-      border-bottom: 0;
-      border-top: 3px solid #0065fc;
-  }
+	.sign-up {
+		display: block; /* Supprime le flex de la version mobile */
+		margin-top: 0.4vw;
+		margin-right: 3vw;
+		margin-left: 3vw;
+	}
 
-  .sign-up {
-      display: block;
-      margin-top: 0.4vw;
-      margin-right: 2vw;
-      margin-left: 2vw;
-  }
+	/* == SECTION SEARCH  */
 
-  /* == SECTION SEARCH  */
+	.search-subtitle {
+		margin-top: 1vw;
+	}
 
-  .search {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-  }
+	.search-form {
+		margin-top: 4vw;
+		margin-bottom: 4vw;
+		border-radius: 2vw;
+		width: 50vw; /* Largeur a 50/100e de la largeur du viewport */
+	}
 
-  .search-subtitle {
-    margin-top: 1vw;
-  }
+	.search-form-icon {
+		padding: 2vw 2.5vw;
+		border-radius: 2vw 0 0 2vw;
+	}
 
-  .search-form {
-    margin-top: 2vw;
-    margin-bottom: 4vw;
-    border-radius: 2vw;
-    width: 50vw;
-  }
+	.search-input {
+		padding-left: 2vw;
+		font-size: 2vw;
+	}
 
-  .search-form-icon {
-    padding: 2vw 2.5vw;
-    border-radius: 2vw 0 0 2vw;
-  }
+	.search-button {
+		font-size: 2vw;
+		border-radius: 0 2vw 2vw 0;
+		padding: 0 2.5vw;
+	}
 
-  .search-input {
-    padding-left: 2vw;
-    font-size: 2vw;
-  }
+	.search-button-name {
+		display: block; /* Affiche le texte "Rechercher" du bouton */
+	}
 
-  .search-button {
-    font-size: 2vw;
-    border-radius: 0 2vw 2vw 0;
-    padding: 0 2.5vw;
-  }
+	.fa-search {
+		display: none; /* Supprime l'icone de loupe du bouton */
+	}
 
-  .search-button-name {
-    display: block;
-  }
+	.search-filter-title {
+		margin: 0 4vw 2vw 0;
+	}
 
-  .fa-search {
-    display: none!important;
-  }
+	.search-filter {
+		margin-right: 1vw;
+		margin-bottom: 0.5vw;
+	}
 
-  .search-filter-title {
-    margin: 0 4vw 2vw 0;
-  }
+	.search-filters-icon {
+		height: 6vw;
+		width: 6vw;
+	}
 
-  .search-filter {
-    margin-right: 1vw;
-    margin-bottom: 0.5vw;
-  }
+	.search-filters-name {
+		margin: 0 1.5vw;
+	}
 
-  .search-filters-icon {
-    height: 6vw;
-    width: 6vw;
-  }
+	.search-result-number-icon {
+		min-height: 3vw;
+		min-width: 3vw;
+		margin-right: 1vw;
+	}
 
-  .search-filters-name {
-    margin: 0 1.5vw;
-  }
+	/* == SECTION LODGING  */
 
-  .search-result-number-icon {
-    min-height: 3vw;
-    min-width: 3vw;
-    margin-right: 1vw;
-  }
+	.lodging-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 
-  /* == SECTION LODGING  */
+	.lodging-card {
+		padding: 0.6vw;
+		margin-bottom: 2vw;
+		width: 47%;
+	}
 
-  .lodging-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+	.lodging-card-content {
+		margin: 1vw;
+	}
 
-  .lodging-card {
-    padding: 0.6vw;
-    margin-bottom: 2vw;
-    width: 47%;
-  }
+	.lodging-card-price {
+		margin-top: 0.8vw;
+		margin-bottom: 0.8vw;
+	}
 
-  .lodging-card-content {
-    margin: 1vw;
-  }
+	.lodging-card-ratings {
+		font-size: 1.5vw;
+	}
 
-  .lodging-card-price {
-    margin-top: 0.8vw;
-    margin-bottom: 0.8vw;
-  }
+	.lodging-show-more {
+		margin-top: 3vw;
+		font-size: 2.5vw;
+	}
 
-  .lodging-card-ratings {
-    font-size: 1.5vw;
-  }
+	.popular-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 
-  .lodging-show-more {
-    margin-top: 3vw;
-    font-size: 2.5vw;
-  }
+	.popular-card {
+		margin-bottom: 1.5vw;
+		width: 30%;
+	}
 
-  .popular-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+	.popular-card a {
+		display: block;
+	}
 
-  .popular-card {
-    margin-bottom: 1.5vw;
-    width: 30%;
-  }
+	.popular-card-img-container {
+		width: 100%;
+	}
 
-  .popular-card a {
-      display: block;
-  }
+	.popular-card-img {
+		padding-top: calc(2% / 5 * 100); /* Force un ratio de 5:2 */
+	}
 
-  .popular-card-img-container {
-      width: 100%;
-  }
+	.popular-card-ratings {
+		padding-bottom: 0.5vw;
+	}
 
-  .popular-card-img {
-      padding-top: calc(1% / 2 * 100);
-  }
+	/* == SECTION ACTIVITY  */
 
-  .popular-card-ratings {
-    padding-bottom: 0.5vw;
-  }
+	.activity-card-container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
 
-  /* == SECTION ACTIVITY  */
+	.activity-card-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 48%;
+	}
 
-  .activity h3 {
-    padding: 2vw;
-  }
+	.activity-card {
+		margin-bottom: 2vw;
+	}
 
-  .activity-card-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+	.activity-card-vieux-port-img,
+	.activity-card-parc-calanques-img {
+		padding-top: calc(71% / 61 * 100); /* Force un ratio de 61:71 */
+	}
 
-  .activity-card-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 48%;
-  }
+	.activity-card-fort-pomegues-img {
+		padding-top: calc(36% / 61 * 100); /* Force un ratio de 61:36 */
+	}
 
-  .activity-card {
-    margin-bottom: 2vw;
-  }
+	.activity-card-iles-frioul-img {
+		padding-top: calc(22% / 61 * 100); /* Force un ratio de 61:22 */
+	}
 
-  .activity-card-vieux-port-img, .activity-card-parc-calanques-img {
-    padding-top: calc(71% / 61 * 100);
-  }
+	.activity-card-notre-dame-de-la-garde-img {
+		padding-top: calc(28% / 61 * 100); /* Force un ratio de 61:28 */
+	}
 
-  .activity-card-fort-pomegues-img {
-    padding-top: calc(36% / 61 * 100);
-  }
+	.activity-card-parc-longchamp-img {
+		padding-top: calc(31% / 61 * 100); /* Force un ratio de 61:31 */
+	}
 
-  .activity-card-iles-frioul-img {
-    padding-top: calc(22% / 61 * 100);
-  }
+	.activity-card-title {
+		padding: 2.5vw;
+	}
 
-  .activity-card-notre-dame-de-la-garde-img {
-    padding-top: calc(28% / 61 * 100);
-  }
+	/* == FOOTER  */
 
-  .activity-card-parc-longchamp-img {
-    padding-top: calc(31% / 61 * 100);
-  }
+	.footer-container {
+		display: flex;
+	}
 
-  /* == FOOTER  */
+	.footer-column {
+		width: 33%;
+	}
 
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-  }
+	.footer-column li {
+		margin-bottom: 2vw;
+	}
 }
 
 /* == TABLET LANDSCAPE  */
+/* Resolution entre 900px et 1199px */
 @media screen and (min-width: 900px) and (max-width: 1199px) {
-  .lodging {
-    flex-wrap: nowrap;
-  }
+	body {
+		font-size: 1em;
+	}
 
-  .lodging-container, .popular-container {
-    background: #f2f2f2;
-    border-radius: 2vw;
-    padding: 3vw 2vw 1vw 2vw;
-  }
+	.ellipsis {
+		/* Tronque le texte si trop long et place "..." à la fin => */
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		/* <= Tronque le texte si trop long et place "..." à la fin */
+	}
 
-  .lodging-container {
-    margin-right: 2vw;
-    margin-left: 2vw;
-  }
+	.search-form-icon {
+		padding: 1.5vw 2vw;
+	}
 
-  .lodging-show-more {
-    margin-top: 1vw;
-  }
+	.search-input {
+		font-size: 1rem;
+	}
 
-  .popular-container {
-    width: 40%;
-    margin-right: 2vw;
-  }
+	.search-button {
+		font-size: 1rem;
+	}
 
-  .popular-card {
-    width: 100%;
-  }
+	.search-filters-icon {
+		height: 4vw;
+		width: 4vw;
+	}
 
-  .activity-card-column {
-    width: 23%;
-  }
+	.lodging {
+		flex-wrap: nowrap;
+	}
 
-  .activity-card {
-    height: 100%;
-  }
+	.lodging-container,
+	.popular-container {
+		background: #f2f2f2;
+		border-radius: 2vw;
+		padding: 3vw 2vw 1vw 2vw;
+	}
 
-  .activity-card-vieux-port-img, .activity-card-parc-calanques-img {
-    padding-top: calc(92% / 61 * 100);
-  }
+	.lodging-container {
+		margin-right: 2vw;
+		margin-left: 2vw;
+	}
+
+	.lodging-show-more {
+		margin-top: 1vw;
+		font-size: 1.5em;
+	}
+
+	.popular-container {
+		width: 45%;
+		margin-right: 2vw;
+	}
+
+	.popular-card {
+		width: 100%;
+	}
+
+	.activity-card-column {
+		width: 23%;
+	}
+
+	.activity-card {
+		height: 100%;
+	}
+
+	.activity-card-vieux-port-img,
+	.activity-card-parc-calanques-img {
+		padding-top: calc(92% / 61 * 100); /* Force un ratio de 61:92 */
+	}
 }
 
 /* == DESKTOP  */
+
+/* Resolution de plus de 1200px */
 @media screen and (min-width: 1200px) {
-  
-  /* == GENERAL  */
-  body {
-    font-size: 1em;
-  }
-
-  .main-container {
-    max-width: 1440px;
-  }
-
-  .header-container, .search, .lodging, .activity, .footer-container {
-    padding: 0 3rem;
-  }
-
-  .lodging-title, .popular-title, .activity-header {
-    padding-bottom: 0;
-    width: 100%;
-  }
-
-  .lodging-card, .popular-card, .activity-card {
-    border-radius: 1rem;
-  }
-
-  .lodging-card-img img, .popular-card-img img, .activity-card-img img {
-    border-radius: 1rem 1rem 0 0;
-  }
-
-  /* == HEADER  */
-
-  .header-container {
-    margin-top: 0;
-    margin-bottom: 3rem;
-  }
-
-  .logo, nav li, .sign-up {
-    padding-top: 3rem;
-  }
-
-  .logo {
-    width: auto;
-    margin-left: 0;
-  }
-
-  nav {
-    order: 0;
-    width: 25%;
-    margin-left: auto;
-  }
-
-  nav ul {
-    margin-top: 0;
-  }
-
-  nav li {
-    border-top: 3px solid #f2f2f2;
-    border-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  nav li:hover {
-    border-top: 3px solid #0065fc;
-    border-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .nav-actived {
-      border-bottom: 0;
-      border-top: 3px solid #0065fc;
-  }
-
-  .sign-up {
-      display: block;
-      margin-top: 0.1rem;
-      margin-right: 0;
-      margin-left: 1rem;
-  }
-
-  /* == SECTION SEARCH  */
-
-  .search {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .search-subtitle {
-    margin-top: 0.5rem;
-  }
-
-  .search-form {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
-    width: 26rem;
-  }
-
-  .search-form-icon {
-    padding: 1rem 1.25rem;
-    border-radius: 1rem 0 0 1rem;
-  }
-
-  .search-input {
-    padding-left: 1rem;
-    font-size: 1rem;
-  }
-
-  .search-button {
-    font-size: 1rem;
-    border-radius: 0 1rem 1rem 0;
-    padding: 0 1.25rem;
-  }
-
-  .search-button-name {
-    display: block;
-  }
-
-  .fa-search {
-    display: none!important;
-  }
-
-  .search-filter-title {
-    margin: 0 2rem 0 0;
-    width: auto;
-  }
-
-  .search-filter {
-    margin-right: 1.5rem;
-    border-radius: 2rem;
-    margin-bottom: 0;
-  }
-
-  .search-filters-icon {
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .search-filters-name {
-    margin: 0 1rem;
-  }
-
-  .search-result-number {
-    margin: 2rem 0;
-  }
-
-  .search-result-number-icon {
-    min-height: 2rem;
-    min-width: 2rem;
-    margin-right: 1rem;
-  }
-
-  /* == SECTION LODGING  */
-
-  .lodging {
-    flex-wrap: nowrap;
-  }
-
-  .lodging-container, .popular-container {
-    background: #f2f2f2;
-    border-radius: 1rem;
-    padding: 3rem 2.5rem;
-
-  }
-
-  .lodging-container {
-   display: flex;
-   flex-wrap: wrap;
-   margin-right: 2.5rem;
-   justify-content: space-between;
-  }
-
-  .lodging-card {
-    padding: 0.3rem;
-    margin-top: 2rem;
-    margin-bottom: 0;
-    width: 30%;
-    font-size: 0.9rem;
-  }
-
-  .lodging-card-img {
-    padding-top: calc(23% / 47 * 100);
-  }
-
-  .lodging-card-content {
-    margin: 0.5rem;
-  }
-
-  .lodging-card-price {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .lodging-card-ratings {
-    font-size: 0.75rem;
-  }
-
-  .lodging-show-more {
-    margin-top: 3rem;
-    font-size: 1.25rem;
-  }
-
-  .popular-container {
-    width: 40%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
-  .popular-card {
-    width: 100%;
-  }
-
-  .popular-card-img {
-    padding-top: calc(27% / 25 * 100);
-  }
-
-  .popular-card-img img {
-    border-radius: 1rem 0 0 1rem;
-  }
-
-  .popular-card-content {
-    margin: 0.5rem 1rem;
-  }
-
-  .popular-card-ratings {
-    padding-bottom: 0.25rem;
-  }
-
-  /* == SECTION ACTIVITY  */
-
-  .activity {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-  }
-
-  .activity-header {
-    margin: 2rem 0;
-  }
-
-  .activity h3 {
-    padding: 1rem;
-  }
-
-  .activity-card-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 23%;
-  }
-
-  .activity-card-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .activity-card {
-    margin-bottom: 0;
-  }
-
-  .activity-card-img {
-    padding-top: calc(27% / 67 * 100);
-  }
-
-  .activity-card-vieux-port-img, .activity-card-parc-calanques-img {
-    padding-top: calc(78% / 61 * 100);
-  }
-
-  .activity-card-fort-pomegues-img {
-    padding-top: calc(36% / 61 * 100);
-  }
-
-  .activity-card-iles-frioul-img {
-    padding-top: calc(22% / 61 * 100);
-  }
-
-  .activity-card-notre-dame-de-la-garde-img {
-    padding-top: calc(28% / 61 * 100);
-  }
-
-  .activity-card-parc-longchamp-img {
-    padding-top: calc(31% / 61 * 100);
-  }
-
-  /* == FOOTER  */
-
-  .footer-container {
-    display: flex;
-    padding-bottom: 2rem;
-    margin-top: 3.5rem;
-    padding-top: 3.5rem;
-  }
-
-  .footer-column {
-    padding-bottom: 0;
-    width: 33%;
-  }
-
-  .footer-column li {
-    margin-bottom: 1rem;
-  }
-
-  .footer-column-title {
-    margin-bottom: 1.5rem;
-  }
+	/* Passage de VW à REM */
+
+	/* == GENERAL  */
+	body {
+		font-size: 1em;
+	}
+
+	.main-container {
+		max-width: 1440px;
+	}
+
+	.header-container,
+	.search,
+	.lodging,
+	.activity,
+	.footer-container {
+		padding: 0 3rem;
+	}
+
+	.main-title {
+		padding-bottom: 0;
+		width: 100%;
+	}
+
+	.card {
+		border-radius: 1rem;
+		transition-duration: 0.5s;
+	}
+
+	.card:hover {
+		transform: scale(1.05); /* Agrandi les cartes au survol */
+	}
+
+	.card-img img {
+		border-radius: 1rem 1rem 0 0;
+	}
+
+	.ellipsis {
+		/* Tronque le texte si trop long et place "..." à la fin => */
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		/* <= Tronque le texte si trop long et place "..." à la fin */
+	}
+
+	/* == HEADER  */
+
+	.header-container {
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+
+	.logo,
+	nav li,
+	.sign-up {
+		padding-top: 3rem;
+	}
+
+	.logo {
+		margin-left: 0;
+	}
+
+	nav {
+		order: 0; /* Supprime le changement d'ordre du menu */
+		width: 25%;
+		margin-left: auto;
+	}
+
+	nav a {
+		transition-duration: 0.5s;
+	}
+
+	nav ul {
+		margin-top: 0;
+	}
+
+	nav li {
+		border-top: 3px solid #f2f2f2;
+		border-bottom: 0;
+		padding-bottom: 0;
+		transition-duration: 0.5s;
+	}
+
+	nav li:hover {
+		border-top: 3px solid #0065fc;
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.nav-actived {
+		border-bottom: 0;
+		border-top: 3px solid #0065fc;
+	}
+
+	.sign-up {
+		display: block; /* Supprime le flex de la version mobile */
+		margin-top: 0.1rem;
+		margin-right: 0;
+		margin-left: 1rem;
+	}
+
+	/* == SECTION SEARCH  */
+
+	.search-subtitle {
+		margin-top: 0.5rem;
+	}
+
+	.search-form {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		border-radius: 1rem;
+		width: 26rem;
+	}
+
+	.search-form-icon {
+		padding: 1rem 1.25rem;
+		border-radius: 1rem 0 0 1rem;
+	}
+
+	.search-input {
+		padding-left: 1rem;
+		font-size: 1rem;
+	}
+
+	.search-button {
+		font-size: 1rem;
+		border-radius: 0 1rem 1rem 0;
+		padding: 0 1.25rem;
+		transition-duration: 0.2s;
+		opacity: 0.8;
+	}
+
+	.search-button:hover {
+		opacity: 1; /* Change la transparance au survol */
+	}
+
+	.search-button-name {
+		display: block; /* Affiche le texte "Rechercher" du bouton */
+	}
+
+	.fa-search {
+		display: none; /* Supprime l'icone de loupe du bouton */
+	}
+
+	.search-filter-title {
+		display: flex;
+		align-items: center;
+		margin: 0 2rem 0 0;
+		width: auto;
+	}
+
+	.search-filter {
+		margin-right: 1.5rem;
+		border-radius: 2rem;
+		margin-bottom: 0;
+		transition-duration: 0.5s;
+	}
+
+	.search-filter:hover {
+		background: #f2f2f2; /* Ajoute une couleur de fond au survol */
+	}
+	.search-filters-icon {
+		height: 3rem;
+		width: 3rem;
+	}
+
+	.search-filters-name {
+		margin: 0 1rem;
+	}
+
+	.search-result-number {
+		margin: 1rem 0;
+	}
+
+	.search-result-number-icon {
+		min-height: 2rem;
+		min-width: 2rem;
+		margin-right: 1rem;
+	}
+
+	/* == SECTION LODGING  */
+
+	.lodging {
+		flex-wrap: nowrap;
+	}
+
+	.lodging-container,
+	.popular-container {
+		background: #f2f2f2;
+		border-radius: 1rem;
+		padding: 3rem 2rem 2rem 2rem;
+	}
+
+	.lodging-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-right: 2rem;
+	}
+
+	.lodging-card {
+		width: 30%;
+		padding: 0.3rem;
+		margin-top: 2rem;
+		margin-bottom: 0;
+	}
+
+	.lodging-card-img {
+		padding-top: calc(23% / 47 * 100); /* Force un ratio de 47:23 */
+	}
+
+	.lodging-card-content {
+		margin: 0.5rem;
+	}
+
+	.lodging-card-price {
+		margin-top: 0.4rem;
+		margin-bottom: 0.4rem;
+		font-size: 0.95rem;
+		white-space: nowrap;
+	}
+
+	.lodging-card-ratings {
+		font-size: 0.75rem;
+	}
+
+	.lodging-show-more {
+		margin-top: 2rem;
+		font-size: 1.25rem;
+	}
+
+	.popular-container {
+		width: 45%;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+
+	.popular-card {
+		width: 100%;
+	}
+
+	.popular-card-title {
+		/* Tronque le texte si trop long (2 lignes) et place "..." à la fin => */
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		white-space: normal;
+		/* => Tronque le texte si trop long (2 lignes) et place "..." à la fin */
+	}
+
+	.popular-card-img {
+		padding-top: calc(27% / 25 * 100); /* Force un ratio de 25:27 */
+	}
+
+	.popular-card-img img {
+		border-radius: 1rem 0 0 1rem;
+	}
+
+	.popular-card-content {
+		margin: 0.5rem 0 0.5rem 1rem;
+	}
+
+	.popular-card-ratings {
+		padding-bottom: 0.25rem;
+	}
+
+	/* == SECTION ACTIVITY  */
+
+	.activity {
+		padding-top: 4rem;
+		padding-bottom: 1rem;
+	}
+
+	.activity-card-column {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 23%;
+	}
+
+	.activity-card-container {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 2rem;
+	}
+
+	.activity-card {
+		margin-bottom: 0;
+	}
+
+	.activity-card-img {
+		padding-top: calc(27% / 67 * 100); /* Force un ratio de 67:27 */
+	}
+
+	.activity-card-vieux-port-img,
+	.activity-card-parc-calanques-img {
+		padding-top: calc(78% / 61 * 100); /* Force un ratio de 61:78 */
+	}
+
+	.activity-card-fort-pomegues-img {
+		padding-top: calc(36% / 61 * 100); /* Force un ratio de 61:36 */
+	}
+
+	.activity-card-iles-frioul-img {
+		padding-top: calc(22% / 61 * 100); /* Force un ratio de 61:22 */
+	}
+
+	.activity-card-notre-dame-de-la-garde-img {
+		padding-top: calc(28% / 61 * 100); /* Force un ratio de 61:28 */
+	}
+
+	.activity-card-parc-longchamp-img {
+		padding-top: calc(31% / 61 * 100); /* Force un ratio de 61:31 */
+	}
+
+	.activity-card-title {
+		padding: 1.25rem;
+	}
+
+	/* == FOOTER  */
+
+	.footer-container {
+		display: flex;
+		padding-top: 2rem;
+		padding-bottom: 1rem;
+		margin-top: 3.5rem;
+	}
+
+	.footer-column {
+		padding-bottom: 0;
+		width: 33%;
+	}
+
+	.footer-column li {
+		margin-bottom: 1rem;
+	}
+
+	.footer-column-title {
+		margin-bottom: 1.5rem;
+	}
 }
