@@ -1,4 +1,4 @@
-# OpenClasrooms Projet 2 : Reservia
+# Transformez une maquette en site web
 
 [![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Farthurblanc.github.io%2FArthurBlanc_2_08102020%2F)
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
@@ -8,9 +8,9 @@ Lien du projet : https://arthurblanc.github.io/ArthurBlanc_2_08102020/
 
 ## Description :
 
-Deuxième projet _Transformez une maquette en site web_ du parcours certifiant [**_Développeur web_**](https://openclassrooms.com/fr/paths/185-developpeur-web) chez [**OpenClassrooms**](https://openclassrooms.com/) en 2020.
+Transformez une maquette en site web :
 
-> Démarrez sur HTML et CSS en intégrant la page Web de Reservia, une plateforme de réservation de vacances.
+> Démarrez sur HTML et CSS en intégrant une page Web, d'une plateforme de réservation de vacances.
 >
 > #### Compétences évaluées
 >
@@ -21,7 +21,7 @@ Deuxième projet _Transformez une maquette en site web_ du parcours certifiant [
 
 ### Situation (fictive) du projet :
 
-Stagiaire développeur web chez **_Reservia_**, une entreprise proposant un outil de planification de vacances.
+Stagiaire développeur web dans une entreprise proposant un outil de planification de vacances.
 
 L’UI Designer a proposé un nouveau design du site basé sur Material Design.
 
@@ -85,7 +85,7 @@ Mon rôle a été de réaliser le prototype du site en intégrant les maquettes 
 -   [GitHub](https://github.com/) - Outil de gestion de versions
 -   [GitHub Pages](https://pages.github.com/) - Outil d’hébergement
 
-## Commits
+## Tags
 
 -   **v1.3c** : Passage des valeur VM en REM pour les layouts et refactoring du CSS
 -   **v1.3b** : Ajout du README
