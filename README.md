@@ -87,7 +87,7 @@ Mon rôle a été de réaliser le prototype du site en intégrant les maquettes 
 
 ## Tags
 
--   **v1.3c** : Passage des valeur VM en REM pour les layouts et refactoring du CSS
+-   **v1.3c** : Passage des valeur VW en REM pour les layouts et refactoring du CSS
 -   **v1.3b** : Ajout du README
 -   **v1.3** : Refonte du HTML et CSS
 -   **v1.2** : Ajout du CSS pour la version Tablet + ajout du code couleur
