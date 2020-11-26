@@ -1,4 +1,4 @@
-# Transformez une maquette en site web
+# P2
 
 [![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Farthurblanc.github.io%2FArthurBlanc_2_08102020%2F)
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
@@ -7,8 +7,6 @@
 Lien du projet : https://arthurblanc.github.io/ArthurBlanc_2_08102020/
 
 ## Description :
-
-Transformez une maquette en site web :
 
 > Démarrez sur HTML et CSS en intégrant une page Web, d'une plateforme de réservation de vacances.
 >
